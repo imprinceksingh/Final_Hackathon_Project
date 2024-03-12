@@ -19,7 +19,6 @@ public class WriteExcelData {
 	public static XSSFSheet bikesheet = workbook.createSheet("BikeDetails");
 	public static XSSFRow headerRow1 = bikesheet.createRow(0);
 
-
 	public static XSSFSheet modelsheet = workbook.createSheet("PopularCarModels");
 	public static XSSFRow headerRow4 = modelsheet.createRow(0);
 
@@ -46,11 +45,10 @@ public class WriteExcelData {
 			setHeaderStyle(headerRow1, 1, "Bike Price");
 			setHeaderStyle(headerRow1, 2, "Launch Date");
 
-			for(String e: bikeDetails.keySet()) {
-				
+			for (String e : bikeDetails.keySet()) {
+
 			}
-			
-			
+
 			int rowNum = 1;
 			for (List<String> detailsList : bikeDetails.values()) {
 				XSSFRow row = bikesheet.createRow(rowNum++);
@@ -81,8 +79,6 @@ public class WriteExcelData {
 			e.printStackTrace();
 		}
 	}
-
-
 
 	// This method will write all car models in PopularCarModels sheet
 	public static void writePopularCarModel(List<String> carModels, String filePath) {
@@ -117,8 +113,5 @@ public class WriteExcelData {
 			e.printStackTrace();
 		}
 	}
-
-	// This method will write all popular car model details
-	
 
 }

@@ -1,19 +1,19 @@
-
 <suite name="Suite">
-	
-	
-	<listeners>
-   <listener class-name="utilities.ExtentReport"></listener>
- </listeners>
- 
-  <test name="Chrome Test">
-	  <parameter name="browser" value="chrome"></parameter>
-	  
-    <classes>
-     <class name="testCases.TC001_InvalidGoogleLogin"/>
-      <class name="testCases.TC002_BikeDetails"/>
-      <class name="testCases.TC003_UsedCarDetails"/>
-    </classes>
-  </test> <!-- Test -->
 
-</suite> <!-- Suite -->
+	<listeners>
+		<listener class-name="utilities.ExtentReport"></listener>
+	</listeners>
+
+	<test name="Chrome Test">
+		<parameter name="browser" value="chrome"></parameter>
+
+		<classes>
+			<class name="testCases.TC001_BikeDetails" />
+			<class name="testCases.TC002_UsedCarDetails" />
+			<class name="testCases.TC003_InvalidGoogleLogin" />
+		</classes>
+	</test> <!--
+	Test -->
+
+</suite> <!--
+Suite -->

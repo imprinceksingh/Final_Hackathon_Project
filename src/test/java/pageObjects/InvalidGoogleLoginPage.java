@@ -37,6 +37,7 @@ public class InvalidGoogleLoginPage extends BasePage {
 	WebElement errormessage;
 
 	public void clickLoginButton() {
+		zigwheels.click();
 		explicitWait(loginbutton);
 		loginbutton.click();
 	}
@@ -70,29 +71,6 @@ public class InvalidGoogleLoginPage extends BasePage {
 
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
-		driver.findElement(By.id("report_submit_close_login")).click();
-	}
-
-//	Functionality for Smoke Testing
-
-	public void checkLoginButton() {
-//		zigwheels.click();
-		boolean login = loginbutton.isDisplayed();
-		if (login) {
-			System.out.println("Login or Signup Button are displayed succesfully...");
-		} else {
-			System.out.println("Login or Signup Button not visible..");
-		}
-	}
-
-	public void checkGoogleOption() {
-		explicitWait(google);
-		boolean googleoption = google.isDisplayed();
-		if (googleoption) {
-			System.out.println("Google option is displayed succesfully...");
-		} else {
-			System.out.println("Google option is not visible..");
-		}
 		driver.findElement(By.id("report_submit_close_login")).click();
 	}
 

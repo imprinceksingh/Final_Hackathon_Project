@@ -13,11 +13,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -27,9 +24,8 @@ public class CrossBrowsing {
 	public Properties property;
 
 	@BeforeTest()
-
 	@Parameters({ "browser" })
-	public WebDriver initializeBrowser( String browser) throws IOException {
+	public WebDriver initializeBrowser(String browser) throws IOException {
 
 		try {
 			if (getProperties().getProperty("execution_env").equalsIgnoreCase("local")) {
@@ -63,14 +59,13 @@ public class CrossBrowsing {
 		}
 		return driver;
 	}
-	
-	public  String captureScreen(String name) 
-	{
+
+	public String captureScreen(String name) {
 		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-		String targetFilePath=System.getProperty("user.dir")+"\\screenshots\\" + name + "_" + timeStamp + ".png";
-		File targetFile=new File(targetFilePath);
+		String targetFilePath = System.getProperty("user.dir") + "\\screenshots\\" + name + "_" + timeStamp + ".png";
+		File targetFile = new File(targetFilePath);
 		sourceFile.renameTo(targetFile);
 		return targetFilePath;
 	}
@@ -82,8 +77,6 @@ public class CrossBrowsing {
 			driver.quit();
 		}
 	}
-	
-	
 
 	public Properties getProperties() throws IOException {
 		String propertyFile = System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties";

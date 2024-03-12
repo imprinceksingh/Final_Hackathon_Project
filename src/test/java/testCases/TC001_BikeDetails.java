@@ -11,7 +11,7 @@ import pageObjects.BikeDetailsPage;
 
 import utilities.WriteExcelData;
 
-public class TC002_BikeDetails extends CrossBrowsing {
+public class TC001_BikeDetails extends CrossBrowsing {
 	BikeDetailsPage bike;
 	String filepath = System.getProperty("user.dir") + "\\src\\test\\resources\\testdata.xlsx";
 

@@ -10,7 +10,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 public class BikeDetailsPage extends BasePage {
 
@@ -18,8 +17,6 @@ public class BikeDetailsPage extends BasePage {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-
-	String filepath = System.getProperty("user.dir") + "\\src\\test\\resources\\Screenshots";
 
 	// Initialising LinkedHashMap to store bike details in ordered way
 	LinkedHashMap<String, List<String>> bikeDetailsMap = new LinkedHashMap<>();
@@ -67,7 +64,6 @@ public class BikeDetailsPage extends BasePage {
 	public void selectManufacturer() {
 		Select select = new Select(selectmanufacturer);
 		select.selectByVisibleText("Honda");
-		captureFullPageScreenshot(driver, filepath);
 	}
 
 	public void clickToViewMore() throws IOException {
@@ -115,45 +111,4 @@ public class BikeDetailsPage extends BasePage {
 			i++;
 		}
 	}
-
-//	Functionality for Smoke Testing
-
-	@FindBy(xpath = "//h1[contains(text(),'Upcoming Bikes in India')]")
-	WebElement bikeheading;
-
-	public void zigwheelspage() {
-		String title = driver.getTitle();
-		Assert.assertEquals(title, "New Cars & Bikes, Prices, News, Reviews, Buy & Sell Used Cars - ZigWheels.com");
-		System.out.println("Zigwheels Page is Opened without any errors");
-	}
-
-	public void checkNewBikes() {
-		boolean newbike = newbikes.isDisplayed();
-		if (newbike) {
-			System.out.println("New Bikes is displayed at header successfully..");
-		} else {
-			System.out.println("New Bikes at header is not visible..");
-		}
-	}
-
-	public void checkUpcomingBikes() {
-		explicitWait(upcomingbike);
-		boolean newbike = upcomingbike.isDisplayed();
-		if (newbike) {
-			System.out.println("Upcoming Bikes is displayed in the list successfully..");
-		} else {
-			System.out.println("Upcoming Bikes is not visible..");
-		}
-	}
-
-	public void validateHondaBikes() {
-		explicitWait(bikeheading);
-		boolean heading = bikeheading.isDisplayed();
-		if (heading) {
-			System.out.println("All upcoming Honda Bikes are displayed successfully..");
-		} else {
-			System.out.println("All upcoming Honda Bikes are not visible..");
-		}
-	}
-
 }

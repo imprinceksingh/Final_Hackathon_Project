@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import factory.CrossBrowsing;
 import pageObjects.InvalidGoogleLoginPage;
 
-public class TC001_InvalidGoogleLogin extends CrossBrowsing {
+public class TC003_InvalidGoogleLogin extends CrossBrowsing {
 	InvalidGoogleLoginPage login;
 	@Test(priority =0)
 	public void testing() {
