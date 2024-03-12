@@ -26,8 +26,8 @@ public class BasePage {
 	}
 
 	public void explicitWait(WebElement element) {
-		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(d -> element.isDisplayed());
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	public void hoverOnElement(WebElement element) {

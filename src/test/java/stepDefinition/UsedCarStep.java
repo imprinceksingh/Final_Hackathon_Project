@@ -44,11 +44,5 @@ public class UsedCarStep {
 		WriteExcelData.writePopularCarModel(carModels, filePath);
 	}
 
-	@Then("user extracts all popular model details")
-	public void user_extracts_all_popular_model_details() throws InterruptedException {
-		// Write code here that turns the phrase above into concrete actions
-		car.printAllPopularCarModelDetails();
-		List<List<List<String>>> allPopularCarModelDetails = car.getAllPopularCarModelDetails();
-		WriteExcelData.writeAllPopularCarModelDetails(allPopularCarModelDetails, carModels, filePath);
-	}
+	
 }

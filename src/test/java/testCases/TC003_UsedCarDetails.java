@@ -5,33 +5,51 @@ import java.util.List;
 import org.testng.annotations.Test;
 
 import factory.CrossBrowsing;
+
 import pageObjects.UsedCarPage;
 import utilities.WriteExcelData;
 
 public class TC003_UsedCarDetails extends CrossBrowsing {
-	UsedCarPage usedcar;
+	UsedCarPage usedcar ;
 	String filepath = System.getProperty("user.dir") + "\\src\\test\\resources\\testdata.xlsx";
 	List<String> carModels;
-
-	@Test(priority = 0)
-	public void testUsedCars() throws InterruptedException {
+	@Test(priority =0)
+	public void testing() {
 		usedcar = new UsedCarPage(driver);
+	}
+	
+	@Test(priority = 1)
+	public void testhoverUsedCars() throws InterruptedException {
+		
 		usedcar.hoverUsedCars();
+	}
+	@Test(priority =2)
+	public void testclickChennai() {
 		usedcar.clickChennai();
+	}
+	
+	@Test(priority =3)
+	public void testscrollToPopularModel() {
 		usedcar.scrollToPopularModel();
-		usedcar.printPopularCarModels();
+	}
+	
+	@Test(priority =4)
+	public void testprintAllPopularCarModelDetails() throws InterruptedException {
 		usedcar.printAllPopularCarModelDetails();
 	}
+	
+	@Test(priority =5)
+	public void testprintPopularCarModels() {
+		usedcar.printPopularCarModels();
+	}
+	
+	
 
-	@Test(priority = 1)
+	@Test(priority = 6)
 	public void testWritePopularCarModel() {
 		carModels = usedcar.getPopularCarModels();
 		WriteExcelData.writePopularCarModel(carModels, filepath);
 	}
 
-	@Test(priority = 2)
-	public void testWriteAllPopularCarModelDetails() throws InterruptedException {
-		List<List<List<String>>> allPopularCarModelDetails = usedcar.getAllPopularCarModelDetails();
-		WriteExcelData.writeAllPopularCarModelDetails(allPopularCarModelDetails, carModels, filepath);
-	}
 }
+

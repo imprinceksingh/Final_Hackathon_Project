@@ -27,7 +27,7 @@ public class Hooks {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 	}
 
-	@AfterStep
+	//@AfterStep
 	public void Screenshot(Scenario scenario) {
 		if (!scenario.isFailed()) {
 			TakesScreenshot ts = (TakesScreenshot) driver;

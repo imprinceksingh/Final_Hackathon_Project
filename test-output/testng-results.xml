@@ -1,40 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="19" passed="19" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-28T11:28:29 IST" name="Suite" finished-at="2024-02-28T11:31:19 IST" duration-ms="170250">
+  <suite started-at="2024-03-12T09:13:12 IST" name="Suite" finished-at="2024-03-12T09:14:39 IST" duration-ms="86244">
     <groups>
     </groups>
-    <test started-at="2024-02-28T11:28:29 IST" name="Chrome Test" finished-at="2024-02-28T11:31:19 IST" duration-ms="170250">
+    <test started-at="2024-03-12T09:13:12 IST" name="Chrome Test" finished-at="2024-03-12T09:14:39 IST" duration-ms="86244">
       <class name="testCases.TC003_UsedCarDetails">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testCases.TC003_UsedCarDetails@514646ef]" started-at="2024-02-28T11:28:29 IST" name="initializeBrowser" finished-at="2024-02-28T11:28:47 IST" duration-ms="17214" status="PASS">
+        <test-method signature="testing()[pri:0, instance:testCases.TC003_UsedCarDetails@4bdeaabb]" started-at="2024-03-12T09:14:16 IST" name="testing" finished-at="2024-03-12T09:14:16 IST" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testing -->
+        <test-method signature="testhoverUsedCars()[pri:1, instance:testCases.TC003_UsedCarDetails@4bdeaabb]" started-at="2024-03-12T09:14:16 IST" name="testhoverUsedCars" finished-at="2024-03-12T09:14:21 IST" duration-ms="4826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testhoverUsedCars -->
+        <test-method signature="testclickChennai()[pri:2, instance:testCases.TC003_UsedCarDetails@4bdeaabb]" started-at="2024-03-12T09:14:22 IST" name="testclickChennai" finished-at="2024-03-12T09:14:30 IST" duration-ms="7520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testclickChennai -->
+        <test-method signature="testscrollToPopularModel()[pri:3, instance:testCases.TC003_UsedCarDetails@4bdeaabb]" started-at="2024-03-12T09:14:31 IST" name="testscrollToPopularModel" finished-at="2024-03-12T09:14:31 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testscrollToPopularModel -->
+        <test-method signature="testprintAllPopularCarModelDetails()[pri:4, instance:testCases.TC003_UsedCarDetails@4bdeaabb]" started-at="2024-03-12T09:14:32 IST" name="testprintAllPopularCarModelDetails" finished-at="2024-03-12T09:14:32 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testprintAllPopularCarModelDetails -->
+        <test-method signature="testprintPopularCarModels()[pri:5, instance:testCases.TC003_UsedCarDetails@4bdeaabb]" started-at="2024-03-12T09:14:32 IST" name="testprintPopularCarModels" finished-at="2024-03-12T09:14:33 IST" duration-ms="562" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testprintPopularCarModels -->
+        <test-method signature="testWritePopularCarModel()[pri:6, instance:testCases.TC003_UsedCarDetails@4bdeaabb]" started-at="2024-03-12T09:14:33 IST" name="testWritePopularCarModel" finished-at="2024-03-12T09:14:34 IST" duration-ms="509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWritePopularCarModel -->
+      </class> <!-- testCases.TC003_UsedCarDetails -->
+      <class name="testCases.TC001_InvalidGoogleLogin">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testCases.TC001_InvalidGoogleLogin@4c163e3]" started-at="2024-03-12T09:13:14 IST" name="initializeBrowser" finished-at="2024-03-12T09:13:32 IST" duration-ms="18564" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="testUsedCars()[pri:0, instance:testCases.TC003_UsedCarDetails@514646ef]" started-at="2024-02-28T11:28:47 IST" name="testUsedCars" finished-at="2024-02-28T11:29:03 IST" duration-ms="16280" status="PASS">
+        <test-method signature="testing()[pri:0, instance:testCases.TC001_InvalidGoogleLogin@4c163e3]" started-at="2024-03-12T09:13:33 IST" name="testing" finished-at="2024-03-12T09:13:33 IST" duration-ms="191" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUsedCars -->
-        <test-method signature="testWritePopularCarModel()[pri:1, instance:testCases.TC003_UsedCarDetails@514646ef]" started-at="2024-02-28T11:29:03 IST" name="testWritePopularCarModel" finished-at="2024-02-28T11:29:09 IST" duration-ms="6129" status="PASS">
+        </test-method> <!-- testing -->
+        <test-method signature="testclickLoginButton()[pri:1, instance:testCases.TC001_InvalidGoogleLogin@4c163e3]" started-at="2024-03-12T09:13:35 IST" name="testclickLoginButton" finished-at="2024-03-12T09:13:36 IST" duration-ms="1831" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testWritePopularCarModel -->
-        <test-method signature="testWriteAllPopularCarModelDetails()[pri:2, instance:testCases.TC003_UsedCarDetails@514646ef]" started-at="2024-02-28T11:29:09 IST" name="testWriteAllPopularCarModelDetails" finished-at="2024-02-28T11:31:16 IST" duration-ms="126786" status="PASS">
+        </test-method> <!-- testclickLoginButton -->
+        <test-method signature="testclickGoogleAccount()[pri:2, instance:testCases.TC001_InvalidGoogleLogin@4c163e3]" started-at="2024-03-12T09:13:37 IST" name="testclickGoogleAccount" finished-at="2024-03-12T09:13:38 IST" duration-ms="564" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testWriteAllPopularCarModelDetails -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TC003_UsedCarDetails@514646ef]" started-at="2024-02-28T11:31:16 IST" name="closeBrowser" finished-at="2024-02-28T11:31:19 IST" duration-ms="3623" status="PASS">
+        </test-method> <!-- testclickGoogleAccount -->
+        <test-method signature="testenterRandomEmail()[pri:3, instance:testCases.TC001_InvalidGoogleLogin@4c163e3]" started-at="2024-03-12T09:13:39 IST" name="testenterRandomEmail" finished-at="2024-03-12T09:13:43 IST" duration-ms="4604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testenterRandomEmail -->
+        <test-method signature="testprintErrorMessage()[pri:4, instance:testCases.TC001_InvalidGoogleLogin@4c163e3]" started-at="2024-03-12T09:13:43 IST" name="testprintErrorMessage" finished-at="2024-03-12T09:13:45 IST" duration-ms="1368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testprintErrorMessage -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TC001_InvalidGoogleLogin@4c163e3]" started-at="2024-03-12T09:14:34 IST" name="closeBrowser" finished-at="2024-03-12T09:14:39 IST" duration-ms="4128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testCases.TC003_UsedCarDetails -->
+      </class> <!-- testCases.TC001_InvalidGoogleLogin -->
+      <class name="testCases.TC002_BikeDetails">
+        <test-method signature="testingBike()[pri:0, instance:testCases.TC002_BikeDetails@5a59ca5e]" started-at="2024-03-12T09:13:46 IST" name="testingBike" finished-at="2024-03-12T09:13:46 IST" duration-ms="72" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingBike -->
+        <test-method signature="testhoverBikes()[pri:1, instance:testCases.TC002_BikeDetails@5a59ca5e]" started-at="2024-03-12T09:13:47 IST" name="testhoverBikes" finished-at="2024-03-12T09:13:47 IST" duration-ms="408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testhoverBikes -->
+        <test-method signature="testclickUpcomingBikes()[pri:2, instance:testCases.TC002_BikeDetails@5a59ca5e]" started-at="2024-03-12T09:13:48 IST" name="testclickUpcomingBikes" finished-at="2024-03-12T09:13:50 IST" duration-ms="1690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testclickUpcomingBikes -->
+        <test-method signature="testselectManufacturer()[pri:3, instance:testCases.TC002_BikeDetails@5a59ca5e]" started-at="2024-03-12T09:13:50 IST" name="testselectManufacturer" finished-at="2024-03-12T09:13:57 IST" duration-ms="6456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testselectManufacturer -->
+        <test-method signature="testclickToViewMore()[pri:4, instance:testCases.TC002_BikeDetails@5a59ca5e]" started-at="2024-03-12T09:13:57 IST" name="testclickToViewMore" finished-at="2024-03-12T09:13:58 IST" duration-ms="873" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testclickToViewMore -->
+        <test-method signature="testrintUpcomingBikeDetails()[pri:5, instance:testCases.TC002_BikeDetails@5a59ca5e]" started-at="2024-03-12T09:13:59 IST" name="testrintUpcomingBikeDetails" finished-at="2024-03-12T09:14:04 IST" duration-ms="5577" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testrintUpcomingBikeDetails -->
+        <test-method signature="testWriteBikeDetails()[pri:6, instance:testCases.TC002_BikeDetails@5a59ca5e]" started-at="2024-03-12T09:14:05 IST" name="testWriteBikeDetails" finished-at="2024-03-12T09:14:15 IST" duration-ms="10435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWriteBikeDetails -->
+      </class> <!-- testCases.TC002_BikeDetails -->
     </test> <!-- Chrome Test -->
   </suite> <!-- Suite -->
 </testng-results>

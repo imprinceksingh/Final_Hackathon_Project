@@ -1,10 +1,15 @@
 package factory;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.Properties;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -18,13 +23,13 @@ import org.testng.annotations.Parameters;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CrossBrowsing {
-	protected WebDriver driver;
-	protected Properties property;
+	public static WebDriver driver;
+	public Properties property;
 
-	@BeforeClass()
+	@BeforeTest()
 
 	@Parameters({ "browser" })
-	public WebDriver initializeBrowser(@Optional("Edge") String browser) throws IOException {
+	public WebDriver initializeBrowser( String browser) throws IOException {
 
 		try {
 			if (getProperties().getProperty("execution_env").equalsIgnoreCase("local")) {
@@ -58,14 +63,27 @@ public class CrossBrowsing {
 		}
 		return driver;
 	}
+	
+	public  String captureScreen(String name) 
+	{
+		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+		String targetFilePath=System.getProperty("user.dir")+"\\screenshots\\" + name + "_" + timeStamp + ".png";
+		File targetFile=new File(targetFilePath);
+		sourceFile.renameTo(targetFile);
+		return targetFilePath;
+	}
 
-	@AfterClass
+	@AfterTest
 	public void closeBrowser() {
 		if (driver != null) {
 			System.out.println("Closing the browser session..");
 			driver.quit();
 		}
 	}
+	
+	
 
 	public Properties getProperties() throws IOException {
 		String propertyFile = System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties";

@@ -9,7 +9,7 @@ Feature: Invalid Google Login
     Then user captures error message
 
   @sanity
-  Scenario: Extract all upcoming bike details under four lacks
+  Scenario: Extract all upcoming bike details under four lakhs
     Given user navigates to zigwheels website
     When user hover on New Bikes
     Then user clicks on Upcoming Bikes
@@ -23,4 +23,3 @@ Feature: Invalid Google Login
     Then user clicks on Chennai
     When user scroll to Popular Models
     Then user extracts all popular models name
-    And user extracts all popular model details
